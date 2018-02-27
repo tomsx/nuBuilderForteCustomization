@@ -1,7 +1,7 @@
-function nuScrollBindMouseWheel(n) {
-    $('.nuScroll').bind("mousewheel", function (event, delta) {
+function nuScrollBindMouseWheel() {
+    $('.nuScroll').bind('mousewheel', function (event, delta) {
         $(this).focus();
-        var e = jQuery.Event("keydown");
+        var e = jQuery.Event('keydown');
         if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
             e.keyCode = 38; // up arrow  
         } else {
@@ -14,6 +14,6 @@ function nuScrollBindMouseWheel(n) {
 
 function nuOnLoad() {
     if (nuFormType() == 'edit') {
-        nuScrollBindMouseWheel(".nuScroll");
+        nuScrollBindMouseWheel();
     }
 }
