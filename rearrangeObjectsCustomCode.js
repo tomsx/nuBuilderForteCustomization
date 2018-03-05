@@ -5,6 +5,7 @@
 
 function nuOnLoad() {
   
+    var f = nuCurrentProperties();
     if (nuFormType() == 'edit' && f.form_id == 'nuform') {
 
         $('#icon').css({ position: 'absolute', top: '51px', left: '212px' });
