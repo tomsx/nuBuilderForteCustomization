@@ -1,3 +1,9 @@
+/* nuBuilder Forte -  change button colors */
+/* https://www.youtube.com/watch?v=hAaBFtOYiH4 */
+
+/* Add this piece of code to: */
+/* Home ► Setup ► Header */
+
 function nuOnLoad() {
 
     var f = nuCurrentProperties();
