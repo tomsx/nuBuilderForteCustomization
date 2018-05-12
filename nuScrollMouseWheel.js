@@ -1,3 +1,10 @@
+/* nuBuilder Forte - nuScroll & Mouse Wheel */
+/* https://www.youtube.com/watch?v=BM0Hd_Vk9AM */
+
+/* Add this piece of code to: */
+/* Home ► Setup ► Header */
+
+
 function nuScrollBindMouseWheel() {
     $('.nuScroll').bind('mousewheel', function (event, delta) {
         $(this).focus();
