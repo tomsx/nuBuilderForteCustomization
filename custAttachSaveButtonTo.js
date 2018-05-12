@@ -1,3 +1,9 @@
+/* nuBuilder Forte -  change button colors */
+/* https://www.youtube.com/watch?v=hAaBFtOYiH4 */
+
+/* Add this piece of code to: */
+/* Form Properties -> Custom Code -> JS */
+
 if (nuFormType() == 'edit') {
     custAttachSaveButtonTo('cus_notes');
 }
