@@ -1,4 +1,5 @@
-/* nuBuilderForte Quick Menu */
+/* nuBuilder Forte Quick Menu */
+/* https://www.youtube.com/watch?v=XPM-6SgPExA */
 
 /* Add this piece of code to: */
 /* Home ► Setup ► Header */
