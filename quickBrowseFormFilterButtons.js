@@ -1,7 +1,8 @@
-/* nuBuilderForte Quick Filter Buttons */
+/* nuBuilder Forte - Quick Filter Buttons */
+/* https://www.youtube.com/watch?v=kramDBxt_n0 */
 
 /* Add this piece of code to: */
-/* Form ► Custom Code ► Javascript */
+/* Form Properties -> Custom Code -> JS */
 
 if (nuFormType() == 'browse') {
    addExtraBrowseFilterBtn("btnFilterLondon","London", "⊆ Lodon");
