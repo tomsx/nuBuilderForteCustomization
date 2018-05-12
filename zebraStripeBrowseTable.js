@@ -1,3 +1,9 @@
+/* nuBuilder Forte -  change button colors */
+/* https://www.youtube.com/watch?v=riZstHGH_aU */
+
+/* Add this piece of code to: */
+/* Home ► Setup ► Header */
+
 function zebraStripeBrowseTable(color1, color2) {
 
     $('[data-nu-column="0"]').each(function (index) {
