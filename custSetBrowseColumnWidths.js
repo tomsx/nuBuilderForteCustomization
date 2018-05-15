@@ -12,7 +12,7 @@ function custSetBrowseColumnWidths() {
 
             if (sf.deleted[i] == 0) {
                 var c = $("div[id='nuBrowseTitle" + i + "']", window.parent.document);
-                var w = c[0].style.width;
+                var w = Math.ceil(parseFloat(c[0].style.width)).toString();
                 $('#' + 'zzzzsys_browse_sf' + nuPad3(i) + 'sbr_width').val(w.replace('px', '')).change();
             }
 
