@@ -1,7 +1,9 @@
-/* nuBuilder Forte - Sending an SMS with Twilio */
-/* Purpose: Watch https://youtu.be/djuWcsRH7UM */
+// nuBuilder Forte - Sending an SMS with Twilio 
+// Purpose: Watch https://youtu.be/djuWcsRH7UM
+// Add this code in the "After Save" (PHP) event of your form
 
 // Example usage:
+// sms_to and sms_txt are fields on your form, replace the fields if they are called differently
 cusSendSMSTwilio("+12685555555","#sms_to#", "#sms_text#"); 
 
 function cusSendSMSTwilio($from, $to, $body) {   
@@ -13,7 +15,8 @@ function cusSendSMSTwilio($from, $to, $body) {
         'From' => $from,
         'To' => $to,  
         'Body' => $body
-    );                      
+    );       
+    
     $post = $data;
     $x = curl_init($url);
     curl_setopt($x, CURLOPT_POST, true);
@@ -25,6 +28,6 @@ function cusSendSMSTwilio($from, $to, $body) {
     $y = curl_exec($x);
     curl_close($x);          
     $out = explode('|', $y);         
-    nuDebug($out);
+    // nuDebug($out); 
 }     
 
