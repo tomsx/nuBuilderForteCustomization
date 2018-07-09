@@ -4,7 +4,6 @@
 /* Home ► Setup ► Header */
 
 function custSetBrowseColumnWidths() {
-
     if (confirm("Copy Column Widths from the Browse Table (Overwrite existing values)?")) {
 
         var sf = nuSubformObject('zzzzsys_browse_sf');
@@ -12,12 +11,18 @@ function custSetBrowseColumnWidths() {
 
             if (sf.deleted[i] == 0) {
                 var c = $("div[id='nuBrowseTitle" + i + "']", window.parent.document);
-                var w = Math.ceil(parseFloat(c[0].style.width)).toString();
+                var w = Math.ceil(roundNearest(parseFloat(c[0].style.width),5)).toString();
                 $('#' + 'zzzzsys_browse_sf' + nuPad3(i) + 'sbr_width').val(w.replace('px', '')).change();
             }
 
         }
     }
+}
+
+function roundNearest(n, v) {
+    n = n / v;
+    n = Math.round(n) * v;
+    return n;
 }
 
 function nuOnLoad() {
