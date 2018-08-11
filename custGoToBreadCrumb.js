@@ -9,7 +9,7 @@
 // 1. Return to the to the previous breadcrumb/screen:
 
 if (nuFormType() == 'edit') {
-    if (nuIsSaved()) {
+    if (nuHasBeenSaved() === 1) {
         custGotoPrevBreadcrumb();
     }
 }
@@ -25,7 +25,7 @@ function custGotoPrevBreadcrumb() {
 // 2. To return to the previous launch form:
 
 if (nuFormType() == 'edit') {
-    if (nuIsSaved()) {
+    if (nuHasBeenSaved() === 1) {
         custGotoPrevLaunchForm();
     }
 }
@@ -43,7 +43,7 @@ function custGotoPrevLaunchForm() {
 // 3. To return to a specific user home page (launch form):
 
 if (nuFormType() == 'edit') {
-    if (nuIsSaved()) {
+    if (nuHasBeenSaved() === 1) {
         custGoBackToUserHome();
     }
 }
