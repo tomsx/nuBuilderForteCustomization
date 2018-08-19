@@ -32,14 +32,15 @@ function nuOnLoad() {
      if ((p.form_id == 'nuform' && p.form_type == 'browseedit')) {
 
          var w = $('#title_zzzzsys_browse_sfsbr_width');
-         console.log('w ' + w.length);
+       
          if (w.length == 1) {
              w.css({
                  "text-decoration": "underline",
                  "text-decoration-style": "dashed",
                  "color": "blue"
              });
-
+             
+             w.prop('onclick', null).off('click'); //  disable sorting on this column
              w.click(function(e) {
                  custSetBrowseColumnWidths();
              });
